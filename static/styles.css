@@ -30,12 +30,13 @@ img {
     max-width: 90%;
     max-height: 90%;
     object-fit: cover;
-    max-height: 300px;
+    max-height: 10000px;
     border-radius: 50%; /* Make the image circular */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    position: relative;
     overflow: hidden;
-    vertical-align: middle
+}
+@media screen and (max-width: 600px) {
+    img {
+        display: none; /* Hide the image on small screens */
+    }
 }
