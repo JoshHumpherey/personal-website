@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFC00; /* Add background color as needed */
+    padding: 10px;
+}
+
+#navbar a {
+    color: black;
+    padding: 8px 16px; /* Add padding to links */
+    text-decoration: none;
+}
+
 body {
     font-family: 'Avenir Next', sans-serif;
     display: flex;

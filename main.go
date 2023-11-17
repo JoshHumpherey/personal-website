@@ -22,6 +22,8 @@ func main() {
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
-
+	router.GET("/resume", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "resume.html", nil)
+	})
 	router.Run(":" + port)
 }
