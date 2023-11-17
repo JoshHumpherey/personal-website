@@ -27,13 +27,14 @@ h1 {
     font-size: 25px;
 }
 img {
+    margin-top: 15%;
     max-width: 90%;
     max-height: 90%;
     object-fit: cover;
     max-height: 10000px;
-    border-radius: 50%; /* Make the image circular */
     position: relative;
     overflow: hidden;
+    border-radius: 50%; /* Make the image circular */
 }
 @media screen and (max-width: 600px) {
     img {
