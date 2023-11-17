@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Avenir Next', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+#content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 800px;
+    width: 90%
+}
+#left-content {
+    text-align: left;
+    max-width: 600px;
+    margin-right: 20px;
+}
+h1 {
+    font-size: 3em;
+}
+#blurb {
+    margin-top: 20px;
+    font-size: 25px;
+}
+img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    max-height: 300px;
+    border-radius: 50%; /* Make the image circular */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    vertical-align: middle
+}
