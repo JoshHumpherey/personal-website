@@ -1,23 +1,27 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
+	"os"
+
+	"github.com/gin-gonic/gin"
 )
 
-func landingPageHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "templates/index.html")
-}
-
 func main() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static/"))))
-	http.HandleFunc("/", landingPageHandler)
-
-	port := 8080
-	addr := fmt.Sprintf(":%d", port)
-	fmt.Printf("Server is listening on http://localhost%s\n", addr)
-	err := http.ListenAndServe(addr, nil)
-	if err != nil {
-		fmt.Println("Error:", err)
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
 	}
+
+	router := gin.New()
+	router.Use(gin.Logger())
+	router.LoadHTMLGlob("templates/*.html")
+	router.Static("/static", "static")
+
+	router.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
+
+	router.Run(":" + port)
 }
