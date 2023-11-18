@@ -5,13 +5,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #FFFC00; /* Add background color as needed */
+    background-color: #FFFC00;
     padding: 10px;
 }
 
 #navbar a {
     color: black;
-    padding: 8px 16px; /* Add padding to links */
+    padding: 8px 16px;
     text-decoration: none;
 }
 
